@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Xcode 7.3" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Xcode 7.3" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Channel" representedClassName="Channel" syncable="YES">
         <attribute name="isPushChannel" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="isPushEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
@@ -67,6 +67,10 @@
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="user" inverseEntity="Event" syncable="YES"/>
         <relationship name="pushChannels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Channel" inverseName="user" inverseEntity="Channel" syncable="YES"/>
     </entity>
+    <entity name="VoIPPushMessage" representedClassName="VoIPPushMessage" parentEntity="Event" syncable="YES">
+        <attribute name="dictionaryPayload" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Channel" positionX="-27" positionY="63" width="128" height="105"/>
         <element name="Event" positionX="-27" positionY="81" width="128" height="75"/>
@@ -78,5 +82,6 @@
         <element name="Status" positionX="0" positionY="90" width="128" height="75"/>
         <element name="SubscribeStatus" positionX="-18" positionY="72" width="128" height="150"/>
         <element name="User" positionX="-18" positionY="72" width="128" height="180"/>
+        <element name="VoIPPushMessage" positionX="-27" positionY="99" width="128" height="75"/>
     </elements>
 </model>

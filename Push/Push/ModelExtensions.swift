@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import PubNub
+import PushKit
 import UserNotifications
 
 protocol CoreDataObjectType {
@@ -19,6 +20,7 @@ protocol CoreDataObjectType {
 enum SystemEventType: CoreDataObjectType {
     case notification
     case pushNotification
+    case voipPushNotification
     
     var managedObjectType: Event.Type {
         switch self {
@@ -26,6 +28,8 @@ enum SystemEventType: CoreDataObjectType {
             fatalError()
         case .pushNotification:
             return PushMessage.self
+        case .voipPushNotification:
+            return VoIPPushMessage.self
         }
     }
     
@@ -37,6 +41,8 @@ enum SystemEventType: CoreDataObjectType {
             self = .notification
         case _ as UNNotification:
             self = .pushNotification
+        case _ as PKPushPayload:
+            self = .voipPushNotification
         default:
             fatalError()
         }

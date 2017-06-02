@@ -22,6 +22,8 @@
 		510CED9F1E25733800527101 /* Status+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CED991E25733800527101 /* Status+CoreDataClass.swift */; };
 		510CEDA01E25733800527101 /* Status+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CED9A1E25733800527101 /* Status+CoreDataProperties.swift */; };
 		510CEDA41E25789900527101 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CEDA31E25789900527101 /* ModelExtensions.swift */; };
+		513733CD1EE1D507002B86F7 /* VoIPPushMessage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513733CB1EE1D507002B86F7 /* VoIPPushMessage+CoreDataClass.swift */; };
+		513733CE1EE1D507002B86F7 /* VoIPPushMessage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513733CC1EE1D507002B86F7 /* VoIPPushMessage+CoreDataProperties.swift */; };
 		513FD8901E39C48B00ADEC31 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513FD88F1E39C48B00ADEC31 /* Options.swift */; };
 		513FD8B81E3AC0D000ADEC31 /* SubscribeStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513FD8B41E3AC0D000ADEC31 /* SubscribeStatus+CoreDataClass.swift */; };
 		513FD8B91E3AC0D000ADEC31 /* SubscribeStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513FD8B51E3AC0D000ADEC31 /* SubscribeStatus+CoreDataProperties.swift */; };
@@ -84,6 +86,8 @@
 		510CED991E25733800527101 /* Status+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Status+CoreDataClass.swift"; sourceTree = "<group>"; };
 		510CED9A1E25733800527101 /* Status+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Status+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		510CEDA31E25789900527101 /* ModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
+		513733CB1EE1D507002B86F7 /* VoIPPushMessage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VoIPPushMessage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		513733CC1EE1D507002B86F7 /* VoIPPushMessage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VoIPPushMessage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		513FD88F1E39C48B00ADEC31 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		513FD8B41E3AC0D000ADEC31 /* SubscribeStatus+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubscribeStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
 		513FD8B51E3AC0D000ADEC31 /* SubscribeStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubscribeStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 		51A56FBE1E37539C003195BF /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				513733CB1EE1D507002B86F7 /* VoIPPushMessage+CoreDataClass.swift */,
+				513733CC1EE1D507002B86F7 /* VoIPPushMessage+CoreDataProperties.swift */,
 				513FD8B41E3AC0D000ADEC31 /* SubscribeStatus+CoreDataClass.swift */,
 				513FD8B51E3AC0D000ADEC31 /* SubscribeStatus+CoreDataProperties.swift */,
 				513FD8B61E3AC0D000ADEC31 /* Message+CoreDataClass.swift */,
@@ -331,7 +337,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -443,6 +449,7 @@
 				51481C991E32B4D1002FEA7C /* Event+CoreDataClass.swift in Sources */,
 				513FD8B81E3AC0D000ADEC31 /* SubscribeStatus+CoreDataClass.swift in Sources */,
 				51481C9C1E32B4D1002FEA7C /* PushAuditResult+CoreDataProperties.swift in Sources */,
+				513733CE1EE1D507002B86F7 /* VoIPPushMessage+CoreDataProperties.swift in Sources */,
 				510CED861E2446E900527101 /* ManagedObjectTableViewCell.swift in Sources */,
 				516814841E26F05C00A9ED89 /* Result+CoreDataProperties.swift in Sources */,
 				510CEDA01E25733800527101 /* Status+CoreDataProperties.swift in Sources */,
@@ -452,6 +459,7 @@
 				51EB8E621E37F7550091FE01 /* Configuration.swift in Sources */,
 				516814801E26F05C00A9ED89 /* Channel+CoreDataProperties.swift in Sources */,
 				51481C981E32B4D1002FEA7C /* PushMessage+CoreDataProperties.swift in Sources */,
+				513733CD1EE1D507002B86F7 /* VoIPPushMessage+CoreDataClass.swift in Sources */,
 				516814821E26F05C00A9ED89 /* User+CoreDataProperties.swift in Sources */,
 				51481C9B1E32B4D1002FEA7C /* PushAuditResult+CoreDataClass.swift in Sources */,
 				51A56FD71E37E20D003195BF /* ConfigurationViewController.swift in Sources */,
@@ -578,12 +586,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Push/Push.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8XP4D6N55Z;
 				INFOPLIST_FILE = Push/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.PushExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.voipPushExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -594,12 +604,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Push/Push.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8XP4D6N55Z;
 				INFOPLIST_FILE = Push/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.PushExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PubNub.voipPushExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

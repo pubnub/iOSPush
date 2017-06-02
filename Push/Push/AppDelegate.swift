@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         PushNotifications.sharedNotifications.appDidLaunchOperations(viewController: self.window?.rootViewController)
         
+//        PushNotifications.sharedNotifications.appDidLaunchOperations(viewController: self.window?.rootViewController)
+        
         return true
     }
 
@@ -77,18 +79,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     // MARK: - Remote Notifications
     
-    func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        DataController.sharedController.performBackgroundTask { (context) in
-            let currentUser = DataController.sharedController.fetchCurrentUser(in: context)
-            currentUser.pushToken = deviceToken
-            do {
-                try context.save()
-            } catch {
-                fatalError("What went wrong now??")
-            }
-        }
-    }
+//    func application(_ application: UIApplication,
+//                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+//        DataController.sharedController.performBackgroundTask { (context) in
+//            let currentUser = DataController.sharedController.fetchCurrentUser(in: context)
+//            currentUser.pushToken = deviceToken
+//            do {
+//                try context.save()
+//            } catch {
+//                fatalError("What went wrong now??")
+//            }
+//        }
+//    }
 
 }
 
