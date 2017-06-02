@@ -18,7 +18,9 @@ fileprivate let UserIdentifierKey = "UserIdentifierKey"
 public class User: NSManagedObject {
     
     static var defaultConfiguration: PNConfiguration {
-        return PNConfiguration(publishKey: defaultPublishKey, subscribeKey: defaultSubscribeKey)
+        let config = PNConfiguration(publishKey: defaultPublishKey, subscribeKey: defaultSubscribeKey)
+        config.stripMobilePayload = false
+        return config
     }
     
     public override func awakeFromInsert() {

@@ -29,7 +29,7 @@ public class PublishStatus: Status {
     
     public override var textViewDisplayText: String {
         let superText = super.textViewDisplayText
-        return superText + "\nTimetoken: \(timetoken)\nInformation: \(information)"
+        return superText + "\nTimetoken: \(timetoken)\nInformation: \(String(describing: information))"
     }
 
 }

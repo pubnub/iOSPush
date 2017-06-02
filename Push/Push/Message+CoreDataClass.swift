@@ -36,7 +36,7 @@ public class Message: Result {
     
     public override var textViewDisplayText: String {
         let superText = super.textViewDisplayText
-        return superText + "\nTimetoken: \(timetoken)\nChannel: \(channel)\nSubscription: \(subscription)\nPublisher: \(publisher)\nMessage: \(message)"
+        return superText + "\nTimetoken: \(timetoken)\nChannel: \(String(describing: channel))\nSubscription: \(String(describing: subscription))\nPublisher: \(String(describing: publisher))\nMessage: \(String(describing: message))"
     }
 
 }

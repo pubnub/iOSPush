@@ -100,7 +100,7 @@ public class PushMessage: Event {
     
     public override var textViewDisplayText: String {
         //return "Type: PNResult\nOperation: \(stringifiedOperation)\nStatus Code: \(statusCode)\nLocal Time: \(creationDate)"
-        return "Type: Push\nIdentifier: \(identifier)\nDate: \(creationDate)\nTrigger: \(trigger.name)\nTitle: \(title)\nSubtitle: \(subtitle)\nBody: \(body)"
+        return "Type: Push\nIdentifier: \(String(describing: identifier))\nDate: \(String(describing: creationDate))\nTrigger: \(trigger.name)\nTitle: \(String(describing: title))\nSubtitle: \(String(describing: subtitle))\nBody: \(String(describing: body))"
     }
 
 }

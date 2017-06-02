@@ -34,7 +34,7 @@ public class SubscribeStatus: Status {
     
     public override var textViewDisplayText: String {
         let superText = super.textViewDisplayText
-        return superText + "\nTimetoken: \(timetoken)\nChannels: \(subscribedChannels)\nChannel groups: \(subscribedChannelGroups)"
+        return superText + "\nTimetoken: \(timetoken)\nChannels: \(String(describing: subscribedChannels))\nChannel groups: \(String(describing: subscribedChannelGroups))"
     }
 
 }
