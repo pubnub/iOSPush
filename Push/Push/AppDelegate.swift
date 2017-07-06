@@ -79,8 +79,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     // MARK: - Remote Notifications
     
-//    func application(_ application: UIApplication,
-//                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        let finalTokenString = tokenString.lowercased()
+        print("########## \(#function) pushToken: \(deviceToken.debugDescription) with finalTokenString: \(finalTokenString)")
 //        DataController.sharedController.performBackgroundTask { (context) in
 //            let currentUser = DataController.sharedController.fetchCurrentUser(in: context)
 //            currentUser.pushToken = deviceToken
@@ -90,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //                fatalError("What went wrong now??")
 //            }
 //        }
-//    }
+    }
 
 }
 
