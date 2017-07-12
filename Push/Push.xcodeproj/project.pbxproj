@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		510CED681E24343800527101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CED671E24343800527101 /* AppDelegate.swift */; };
-		510CED701E24343800527101 /* Push.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 510CED6E1E24343800527101 /* Push.xcdatamodeld */; };
 		510CED721E24343800527101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 510CED711E24343800527101 /* Assets.xcassets */; };
 		510CED751E24343900527101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510CED731E24343900527101 /* LaunchScreen.storyboard */; };
 		510CED7D1E24356800527101 /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510CED7C1E24356800527101 /* UtilityExtensions.swift */; };
@@ -41,6 +40,7 @@
 		516814831E26F05C00A9ED89 /* Result+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5168147D1E26F05C00A9ED89 /* Result+CoreDataClass.swift */; };
 		516814841E26F05C00A9ED89 /* Result+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5168147E1E26F05C00A9ED89 /* Result+CoreDataProperties.swift */; };
 		516814881E28313600A9ED89 /* PubNubExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516814871E28313600A9ED89 /* PubNubExtensions.swift */; };
+		51A52CFA1F16BF5C000E776E /* Push.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51A52CF81F16BF5C000E776E /* Push.xcdatamodeld */; };
 		51A56FBD1E3745DA003195BF /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56FBC1E3745DA003195BF /* Publish.swift */; };
 		51A56FC01E3754F2003195BF /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56FBF1E3754F2003195BF /* PushNotifications.swift */; };
 		51A56FD21E37DB73003195BF /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56FD11E37DB73003195BF /* ConfigurationView.swift */; };
@@ -68,7 +68,6 @@
 		2764B5C26659B7C156826A62 /* Pods-Push.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Push.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Push/Pods-Push.release.xcconfig"; sourceTree = "<group>"; };
 		510CED641E24343800527101 /* Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Push.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		510CED671E24343800527101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		510CED6F1E24343800527101 /* Push.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Push.xcdatamodel; sourceTree = "<group>"; };
 		510CED711E24343800527101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		510CED741E24343900527101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		510CED761E24343900527101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		5168147D1E26F05C00A9ED89 /* Result+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5168147E1E26F05C00A9ED89 /* Result+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		516814871E28313600A9ED89 /* PubNubExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubExtensions.swift; sourceTree = "<group>"; };
+		51A52CF91F16BF5C000E776E /* Push.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Push.xcdatamodel; sourceTree = "<group>"; };
 		51A56FBC1E3745DA003195BF /* Publish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		51A56FBF1E3754F2003195BF /* PushNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
 		51A56FD11E37DB73003195BF /* ConfigurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 		5142CA1A1E257ECE005FBAD8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				51A52CF81F16BF5C000E776E /* Push.xcdatamodeld */,
 				51A56FBE1E37539C003195BF /* Objects */,
 				510CEDA31E25789900527101 /* ModelExtensions.swift */,
-				510CED6E1E24343800527101 /* Push.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -433,7 +433,6 @@
 				51EB8E641E3953F00091FE01 /* KeyValueLabelCollectionViewCell.swift in Sources */,
 				51481C9A1E32B4D1002FEA7C /* Event+CoreDataProperties.swift in Sources */,
 				513FD8BA1E3AC0D000ADEC31 /* Message+CoreDataClass.swift in Sources */,
-				510CED701E24343800527101 /* Push.xcdatamodeld in Sources */,
 				516814811E26F05C00A9ED89 /* User+CoreDataClass.swift in Sources */,
 				510CED9E1E25733800527101 /* PublishStatus+CoreDataProperties.swift in Sources */,
 				516814831E26F05C00A9ED89 /* Result+CoreDataClass.swift in Sources */,
@@ -457,6 +456,7 @@
 				51A56FD71E37E20D003195BF /* ConfigurationViewController.swift in Sources */,
 				513FD8BB1E3AC0D000ADEC31 /* Message+CoreDataProperties.swift in Sources */,
 				510CED9D1E25733800527101 /* PublishStatus+CoreDataClass.swift in Sources */,
+				51A52CFA1F16BF5C000E776E /* Push.xcdatamodeld in Sources */,
 				516814881E28313600A9ED89 /* PubNubExtensions.swift in Sources */,
 				510CED841E2446D200527101 /* ClientConsoleView.swift in Sources */,
 				51A56FC01E3754F2003195BF /* PushNotifications.swift in Sources */,
@@ -628,12 +628,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		510CED6E1E24343800527101 /* Push.xcdatamodeld */ = {
+		51A52CF81F16BF5C000E776E /* Push.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				510CED6F1E24343800527101 /* Push.xcdatamodel */,
+				51A52CF91F16BF5C000E776E /* Push.xcdatamodel */,
 			);
-			currentVersion = 510CED6F1E24343800527101 /* Push.xcdatamodel */;
+			currentVersion = 51A52CF91F16BF5C000E776E /* Push.xcdatamodel */;
 			path = Push.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
