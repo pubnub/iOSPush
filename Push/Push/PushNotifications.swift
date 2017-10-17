@@ -36,7 +36,9 @@ class PushNotifications: NSObject, UNUserNotificationCenterDelegate {
                     // You might want to remove this, or handle errors differently in production
                     assert(error == nil)
                     if granted {
-                        UIApplication.shared.registerForRemoteNotifications()
+                        DispatchQueue.main.async {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        }
                     }
                 })
             // We are already authorized, so no need to ask
