@@ -29,6 +29,7 @@ class Network: NSObject, PNObjectEventListener {
             DispatchQueue.main.async {
                 completion?(updatedClient)
             }
+            
         }
     }
     
@@ -87,9 +88,12 @@ class Network: NSObject, PNObjectEventListener {
                     config?.uuid = existingUser.identifier!
                     config?.authKey = existingUser.authKey
                     config?.origin = existingUser.origin!
+                    config?.stripMobilePayload = false
                 }
                 self.client = PubNub.clientWithConfiguration(config!, callbackQueue: self.networkQueue)
                 self.client.addListener(self)
+                self.client.logger.enabled = true
+                self.client.logger.setLogLevel(PNLogLevel.PNVerboseLogLevel.rawValue)
             }
             networkQueue.async(execute: setItem)
         }

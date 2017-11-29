@@ -1,16 +1,16 @@
 PODS:
-  - IdleTimer (0.8.0)
-  - PubNub (4.7.1):
-    - PubNub/Core (= 4.7.1)
-  - PubNub/Core (4.7.1)
+  - IdleTimer (0.9.1)
+  - PubNub (4.7.3):
+    - PubNub/Core (= 4.7.3)
+  - PubNub/Core (4.7.3)
 
 DEPENDENCIES:
   - IdleTimer
   - PubNub
 
 SPEC CHECKSUMS:
-  IdleTimer: e38c59b6b7dca0d000901dfccbe0be7906e09b60
-  PubNub: 214bf072f81bd809de275c2c5d5f423d79a287f2
+  IdleTimer: bbd5f2170b117e6ab6cc776eafa45078d164f835
+  PubNub: ba9f67ffc18004aa88efff9b45cf9537b72fefde
 
 PODFILE CHECKSUM: 8c7d9ec40fdbdf9ecc81b71698d15fed48437421
 
