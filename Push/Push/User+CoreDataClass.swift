@@ -10,8 +10,8 @@ import Foundation
 import CoreData
 import PubNub
 
-fileprivate let defaultPublishKey = "pub-c-a8c121aa-0f33-4211-9008-ace7443d229c"
-fileprivate let defaultSubscribeKey = "sub-c-e22abf96-e803-11e6-a5f4-02ee2ddab7fe"
+fileprivate let defaultPublishKey = "pub-c-82017c8b-cdfb-440a-b283-96f3b9005eb2"
+fileprivate let defaultSubscribeKey = "sub-c-d3f1bf90-d634-11e7-a08b-0e82fd6001ec"
 fileprivate let UserIdentifierKey = "UserIdentifierKey"
 
 @objc(User)
@@ -20,6 +20,7 @@ public class User: NSManagedObject {
     static var defaultConfiguration: PNConfiguration {
         let config = PNConfiguration(publishKey: defaultPublishKey, subscribeKey: defaultSubscribeKey)
         config.stripMobilePayload = false
+//        config.origin = "balancer-bronze1.devbuild.aws-pdx-1.ps.pn"
         return config
     }
     
@@ -28,6 +29,7 @@ public class User: NSManagedObject {
         identifier = UUID().uuidString
         subscribeKey = defaultSubscribeKey
         publishKey = defaultPublishKey
+//        origin = "balancer-bronze1.devbuild.aws-pdx-1.ps.pn"
     }
     
     func removeAllResults(in context: NSManagedObjectContext? = nil) {
