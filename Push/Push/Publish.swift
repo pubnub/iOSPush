@@ -30,21 +30,22 @@ extension Network {
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter mobile push dictionary"
-            textField.text = "{\"pn_apns\": {\"aps\": {\"alert\": \"Your order is ready for pickup!\",\"badge\": 1,\"payment_info\": {\"credit_card\": 987656789876,\"expiration\": \"0108\"}}},\"pn_gcm\": {\"data\": \"this is my data only for gcm devices\"},\"data_for_all\": {\"info\": \"This is data all non-APNS and non-GCM devices would receive. They would also receive the pn_apns and pn_gcm data.\"},\"pn_debug\": true}"
+            textField.text = "{\"pn_apns\":{\"aps\":{\"alert\": {\"title\" : \"🚨THE GREAT ONE ALERT at https://pubnub.com\",\"body\":\"Watch Budweiser's new anthem with Wayne Gretzky and more https://pubnub.com\"}},\"data\":{\"message\":\"🚨 Watch Budweiser's new anthem with Wayne Gretzky and more.\",\"url\":\"https://www.youtube.com/watch?v=YwLnw9It9d0\",\"type\":\"generic-notification\"}}}"
         }
         
         let pushPayloadTextField = alertController.textFields![2]
         
-        var finalPushPayload: [String:Any]? = nil
-        if let pushPayloadData = pushPayloadTextField.text?.data(using: .utf8) {
-            do {
-                finalPushPayload = try JSONSerialization.jsonObject(with: pushPayloadData, options: [.allowFragments]) as? [String: Any]
-            } catch {
-                fatalError(error.localizedDescription)
-            }
-        }
+        
         
         let publishAction = UIAlertAction(title: "Publish", style: .destructive) { (action) in
+            var finalPushPayload: [String:Any]? = nil
+            if let pushPayloadData = pushPayloadTextField.text?.data(using: .utf16) {
+                do {
+                    finalPushPayload = try JSONSerialization.jsonObject(with: pushPayloadData, options: [.allowFragments]) as? [String: Any]
+                } catch {
+                    fatalError(error.localizedDescription)
+                }
+            }
             self.client.publish(payloadTextField.text, toChannel: channelsTextField.text!, mobilePushPayload: finalPushPayload, withCompletion: { (status) in
                 self.networkContext.perform {
                     _ = DataController.sharedController.createCoreDataEvent(in: self.networkContext, for: status, with: self.user)

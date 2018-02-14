@@ -87,8 +87,11 @@ class Network: NSObject, PNObjectEventListener {
                     config?.uuid = existingUser.identifier!
                     config?.authKey = existingUser.authKey
                     config?.origin = existingUser.origin!
+                    config?.stripMobilePayload = false
                 }
                 self.client = PubNub.clientWithConfiguration(config!, callbackQueue: self.networkQueue)
+                self.client.logger.enabled = true
+                self.client.logger.setLogLevel(PNLogLevel.PNVerboseLogLevel.rawValue)
                 self.client.addListener(self)
             }
             networkQueue.async(execute: setItem)
@@ -156,6 +159,7 @@ class Network: NSObject, PNObjectEventListener {
     
     override init() {
         let config = User.defaultConfiguration
+        config.stripMobilePayload = false
         self.client = PubNub.clientWithConfiguration(config)
         let context = DataController.sharedController.newBackgroundContext()
         context.automaticallyMergesChangesFromParent = true
