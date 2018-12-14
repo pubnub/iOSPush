@@ -10,8 +10,8 @@ import Foundation
 import CoreData
 import PubNub
 
-fileprivate let defaultPublishKey = "pub-c-684e3cfc-a48d-428e-8c7d-d8f5151fb0f0"
-fileprivate let defaultSubscribeKey = "sub-c-2b8fcf10-111f-11e8-b857-da98488f5703"
+fileprivate let defaultPublishKey = "pub-c-b090b085-acd4-4c2b-9195-cf09d6789d75"
+fileprivate let defaultSubscribeKey = "sub-c-5b984e4a-bdf8-11e8-953e-ba6096420497"
 fileprivate let UserIdentifierKey = "UserIdentifierKey"
 
 @objc(User)

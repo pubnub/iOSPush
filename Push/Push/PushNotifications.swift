@@ -54,6 +54,8 @@ class PushNotifications: NSObject, UNUserNotificationCenterDelegate {
                 useNotificationsAlertController.addAction(cancelAction)
                 viewController?.present(useNotificationsAlertController, animated: true)
                 print("We cannot use notifications because the user has denied permissions")
+            case .provisional:
+                fatalError("What is this?")
             }
         }
     }
